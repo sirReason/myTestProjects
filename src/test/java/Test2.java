@@ -1,9 +1,13 @@
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class Test2 {
+public class Test2 implements Serializable {
+
+    private static final long serialVersionUID = 6232696428067116234L;
+
     public static void main(String[] args) {
         long start = System.currentTimeMillis();
         List<String> list = new ArrayList<String>();
