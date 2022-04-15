@@ -6,7 +6,7 @@ import java.util.concurrent.Executors;
 public class Test4 {
     public static void main(String[] args) {
         long start = System.currentTimeMillis();
-        List<String> list = new ArrayList<String>();
+        List list = new ArrayList<>();
         for (int i = 0; i < 200; i++) {
             list.add(i, String.valueOf(i));
         }

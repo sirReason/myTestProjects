@@ -21,7 +21,6 @@ public class Test {
             try {
                 Thread.sleep(waitTime);
                 executor.shutdown();
-                executor.awaitTermination(waitTime, TimeUnit.MILLISECONDS);
             } catch (InterruptedException ignored) {
             }
         }
