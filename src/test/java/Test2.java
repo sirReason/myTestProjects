@@ -15,8 +15,8 @@ public class Test2 implements Serializable {
             list.add(i, String.valueOf(i));
         }
         System.out.println(list);
-        //ExecutorService newFixedThreadPool = Executors.newFixedThreadPool(5);
-        list.parallelStream().forEach( opTrans -> {
+        ExecutorService newFixedThreadPool = Executors.newFixedThreadPool(5);
+        list.stream().forEach( opTrans -> {
                 System.out.println(Thread.currentThread().getName() + " index = " + opTrans.toString());
                 if ("3".equals(opTrans.toString())) {
                     try {
@@ -32,7 +32,7 @@ public class Test2 implements Serializable {
                 }
         });
         System.out.println("on the main thread...");
-        //newFixedThreadPool.shutdown();
+        newFixedThreadPool.shutdown();
         System.out.println("执行任务消耗了 ：" + (System.currentTimeMillis() - start) + "毫秒");
     }
 }
